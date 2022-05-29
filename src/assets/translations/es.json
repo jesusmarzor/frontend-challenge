@@ -1,0 +1,23 @@
+{
+    "Catalogue": "Catálogo",
+    "Products": "Productos",
+    "Title": "Artículo",
+    "Price": "Precio",
+    "Tax": "Impuesto",
+    "Taxes": "Impuestos",
+    "Stock": "Cantidad",
+    "Actions": "Acciones",
+    "Empty": "Vacío",
+    "Search": "Buscar",
+    "Results": "{{min}} a {{max}} de {{total}} resultados",
+    "General": "{{lang}} General - {{percentage}}",
+    "Reduced": "{{lang}} Reducido - {{percentage}}",
+    "Super_Reduced": "{{lang}} Super reducido - {{percentage}}",
+    "Without_Tax": "Sin impuestos",
+    "Error_404": "Hmm...esta página no existe. Intenta buscar algo diferente",
+    "Return_Main": "Volver a la página principal",
+    "Loading": "Cargando...",
+    "Products_dont_exist": "No existen productos",
+    "Spain_flag": "Bandera de España",
+    "England_flag": "Bandera de Inglaterra"
+  }

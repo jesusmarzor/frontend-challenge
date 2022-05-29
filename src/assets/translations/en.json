@@ -1,0 +1,23 @@
+{
+    "Catalogue": "Catalogue",
+    "Products": "Products",
+    "Title": "Article",
+    "Price": "Price",
+    "Tax": "Tax",
+    "Taxes": "Taxes",
+    "Stock": "Stock",
+    "Actions": "Actions",
+    "Empty": "Empty",
+    "Search": "Search",
+    "Results": "{{min}} to {{max}} of {{total}} results",
+    "General": "{{lang}} General - {{percentage}}",
+    "Reduced": "{{lang}} Reduced - {{percentage}}",
+    "Super_Reduced": "{{lang}} Super reduced - {{percentage}}",
+    "Without_Tax": "Without tax",
+    "Error_404": "Hmm... this page does not exist. Try to find something different",
+    "Return_Main": "Return to main page",
+    "Loading": "Loading...",
+    "Products_dont_exist": "Products don't exist",
+    "Spain_flag": "Spain flag",
+    "England_flag": "England flag"
+  }
