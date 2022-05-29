@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import SearchForm from '../partials/actions/SearchForm';
 import FilterButton from '../components/DropdownFilter';
 import ProductsTable from '../partials/products/ProductsTable';
-import PaginationNumeric from '../components/PaginationNumeric';
+
+import { useTranslation } from 'react-i18next';
 
 function Products() {
-
+  const { t } = useTranslation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -31,13 +32,13 @@ function Products() {
 
               {/* Left: Title */}
               <div className="mb-4 sm:mb-0">
-                <h1 className="text-2xl md:text-3xl text-slate-800 font-bold">Catálogo</h1>
+                <h1 className="text-2xl md:text-3xl text-slate-800 font-bold">{t('Catalogue')}</h1>
               </div>
 
               {/* Right: Actions */}
               <div className="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
                 {/* Search form */}
-                <SearchForm placeholder="Search by Product ID…" />
+                <SearchForm/>
                 {/* Filter button */}
                 <FilterButton align="right" />
               </div>
@@ -45,12 +46,7 @@ function Products() {
             </div>
 
             {/* Table */}
-            <ProductsTable />
-
-            {/* Pagination */}
-            <div className="mt-8">
-              <PaginationNumeric />
-            </div>
+            <ProductsTable/>
 
           </div>
         </main>

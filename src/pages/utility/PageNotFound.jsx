@@ -10,6 +10,8 @@ function PageNotFound() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const { t } = useTranslation();
+
   return (
     <div className="flex h-screen overflow-hidden">
 
@@ -31,8 +33,8 @@ function PageNotFound() {
                 <div className="inline-flex mb-8">
                   <img src={NotFoundImage} width="176" height="176" alt="404 illustration" />
                 </div>
-                <div className="mb-6">Hmm...esta página no existe. Intenta buscar algo diferente</div>
-                <Link to="/" className="btn bg-blue-500 hover:bg-blue-600 text-white">Volver a la página principal</Link>
+                <div className="mb-6">{t('Error_404')}</div>
+                <Link to="/" className="btn bg-blue-500 hover:bg-blue-600 text-white">{t('Return_Main')}</Link>
               </div>
 
             </div>

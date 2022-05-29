@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import logo from './../assets/img/logo.png';
+import { useTranslation } from "react-i18next";
 
 function Sidebar({
   sidebarOpen,
@@ -14,6 +16,8 @@ function Sidebar({
 
   const storedSidebarExpanded = localStorage.getItem('sidebar-expanded');
   const [sidebarExpanded, setSidebarExpanded] = useState(storedSidebarExpanded === null ? false : storedSidebarExpanded === 'true');
+
+  const { t } = useTranslation();
 
   // close on click outside
   useEffect(() => {
@@ -80,28 +84,7 @@ function Sidebar({
           </button>
           {/* Logo */}
           <NavLink end to="/" className="block">
-            <svg width="32" height="32" viewBox="0 0 32 32">
-              <defs>
-                <linearGradient x1="28.538%" y1="20.229%" x2="100%" y2="108.156%" id="logo-a">
-                  <stop stopColor="#A5B4FC" stopOpacity="0" offset="0%" />
-                  <stop stopColor="#A5B4FC" offset="100%" />
-                </linearGradient>
-                <linearGradient x1="88.638%" y1="29.267%" x2="22.42%" y2="100%" id="logo-b">
-                  <stop stopColor="#38BDF8" stopOpacity="0" offset="0%" />
-                  <stop stopColor="#38BDF8" offset="100%" />
-                </linearGradient>
-              </defs>
-              <rect fill="#6366F1" width="32" height="32" rx="16" />
-              <path d="M18.277.16C26.035 1.267 32 7.938 32 16c0 8.837-7.163 16-16 16a15.937 15.937 0 01-10.426-3.863L18.277.161z" fill="#4F46E5" />
-              <path
-                d="M7.404 2.503l18.339 26.19A15.93 15.93 0 0116 32C7.163 32 0 24.837 0 16 0 10.327 2.952 5.344 7.404 2.503z"
-                fill="url(#logo-a)"
-              />
-              <path
-                d="M2.223 24.14L29.777 7.86A15.926 15.926 0 0132 16c0 8.837-7.163 16-16 16-5.864 0-10.991-3.154-13.777-7.86z"
-                fill="url(#logo-b)"
-              />
-            </svg>
+            <img className="w-full" src={logo}/>
           </NavLink>
         </div>
 
@@ -113,7 +96,7 @@ function Sidebar({
               <span className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6" aria-hidden="true">
                 •••
               </span>
-              <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">Pages</span>
+              <span className="lg:hidden lg:sidebar-expanded:block 2xl:block uppercase">App Venped</span>
             </h3>
             <ul className="mt-3">
 
@@ -127,24 +110,11 @@ function Sidebar({
                   }`}
                 >
                   <div className="flex items-center">
-                    <svg className="shrink-0 h-6 w-6" viewBox="0 0 24 24">
-                    <path
-                                className={`fill-current text-slate-400 ${
-                                  (pathname === '/' || pathname.includes('products')) && '!text-indigo-500'
-                                }`}
-                                d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0z"
-                              />
-                              <path
-                                className={`fill-current text-slate-600 ${(pathname === '/' || pathname.includes('products')) && 'text-indigo-600'}`}
-                                d="M12 3c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9z"
-                              />
-                              <path
-                                className={`fill-current text-slate-400 ${(pathname === '/' || pathname.includes('products')) && 'text-indigo-200'}`}
-                                d="M12 15c-1.654 0-3-1.346-3-3 0-.462.113-.894.3-1.285L6 6l4.714 3.301A2.973 2.973 0 0112 9c1.654 0 3 1.346 3 3s-1.346 3-3 3z"
-                              />
-                    </svg>
+                  <svg x="0px" y="0px" width="30px" height="30px" viewBox="0 0 48 48">
+                    <path className="fill-indigo-500" d="M43,46H5c-2.209,0-4-1.791-4-4l4-24c0.678-3.442,2.668-4,4.877-4h2.652  C14.037,7.052,18.602,2,24,2s9.963,5.052,11.471,12h2.652c2.209,0,4.199,0.558,4.877,4l4,24C47,44.209,45.209,46,43,46z M24,4  c-4.352,0-8.045,4.178-9.418,10h18.837C32.045,8.178,28.353,4,24,4z M41,18c-0.308-1.351-0.957-2-2.37-2h-2.828  C35.925,16.976,36,17.975,36,19c0,0.552-0.447,1-1,1s-1-0.448-1-1c0-1.027-0.069-2.031-0.201-3H14.201C14.07,16.969,14,17.973,14,19  c0,0.552-0.447,1-1,1s-1-0.448-1-1c0-1.025,0.075-2.024,0.197-3H9.369C7.957,16,7.309,16.649,7,18L3,42c0,1.104,0.896,2,2,2h38  c1.104,0,2-0.896,2-2L41,18z"/>
+                  </svg>
                     <span className="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                      Catálogo
+                      {t('Catalogue')}
                     </span>
                   </div>
                 </NavLink>
