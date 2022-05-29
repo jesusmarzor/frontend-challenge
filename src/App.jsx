@@ -4,12 +4,13 @@ import {
   Route,
   useLocation
 } from 'react-router-dom';
-
+import { VariablesProvider } from './contexts/variablesContext';
 import './css/style.scss';
 
 // Import pages
 import Products from './pages/Products';
 import PageNotFound from './pages/utility/PageNotFound';
+import "./config/i18n";
 
 function App() {
 
@@ -22,13 +23,13 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   return (
-    <>
+    <VariablesProvider>
       <Routes>
         <Route exact path="/" element={<Products />} />
         <Route path="/products" element={<Products />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </>
+    </VariablesProvider>
   );
 }
 
