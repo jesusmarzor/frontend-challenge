@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin');
+const { default: NewColors } = require('../utils/NewColors');
 
 module.exports = {
   content: [
@@ -51,6 +52,9 @@ module.exports = {
       },
       zIndex: {
         60: '60',
+      },
+      colors: {
+        ...NewColors
       },
     },
   },
