@@ -1,16 +1,28 @@
-# Mosaic React
+# Frontend Challenge Venped
 
-React landing page template.
+## Ejecución :star:
+  
+Una vez descargado el repositorio:
 
-## Project setup
-```
-npm install
-```
+  - Instalar todas las dependencias
+  
+    ```
+    npm install
+    ```
+    
+  - Ejecutar la aplicación web en modo desarrollo
+  
+    ```
+    npm run dev
+    ```
+    
+**Importante: La URL para obtener los productos no se encuentra en el código. Está implementada como variable de entorno**
 
-### Compiles and hot-reloads for development
-```
-npm run dev
-```
+## Autor ✒️
+**Jesús Martín Zorrilla** - *Trabajo Inicial y Documentación*
 
-### Customize configuration
-See [Configuration Reference](https://vitejs.dev/guide/).
+- [Portafolio](https://jesusmarzor.com)
+- [Linkedin](https://www.linkedin.com/in/jesusmarzor/)
+
+## Licencia 📄
+Este proyecto está bajo la Licencia (GNU General Public License v3.0) - mira el archivo [LICENSE](LICENSE) para detalles
