@@ -30,7 +30,7 @@ Una vez descargado el repositorio:
     npm run dev
     ```
   - Ejecutar los test de la aplicación web
-  - 
+  
     ```
       npm run test
     ```
